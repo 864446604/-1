@@ -1,57 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <title>评分页面</title>
-    <style type="text/css">
-        tr {
-            font-size: 100px;
-            color: red;
-            cursor: pointer;
-            border: 2px;
-        }
-    </style>
-    <script type="text/javascript">
-        window.onload = function () {
-            var mc = document.getElementById('tr1').getElementsByTagName('td');
-            for (i = 0; i <= mc.length; i++)
-            {
-                mc[i].onmouseover = function ()
-                {
-                    for (s = 0; s < i; s++)
-                    {
-                        mc[s].innerHTML = '★';
-                        if (mc[s] == this)
-                            break;
-                    }
-                };
-                mc[i].onmouseout = function ()
-                {
-                    var v = -1;
-                    for (s = 0; s < i; s++)
-                    {
-                     
-                        mc[s].innerHTML = '☆';
-                        if (mc[i].getAttribute('isclicked')) {
-                        v = s;
-                        }
-                        for (var x = 0; x <= v, x++) {
-                            mc[x].innerHTML ='★';
-                        }
-                    }
-                    
-                    
-                };
-                mc[i].onclick = function () {
-                    this.setAttribute('isclicked', '1');
-                    for (s = 0; s < i; s++) {
-                        mc[s].removeAttribute('isclicked');
-                    }
-                };
-            }
-        };
-    </script>
-</head>
+
 
 <body>
     <table>
